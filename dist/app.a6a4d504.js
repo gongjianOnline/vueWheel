@@ -12428,7 +12428,27 @@ function patchScopedSlots (instance) {
 }
 
 },{}],"src/button.vue":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: ['icon', 'iconPosition']
+};
+exports.default = _default;
         var $030d89 = exports.default || module.exports;
       
       if (typeof $030d89 === 'function') {
@@ -12438,10 +12458,24 @@ function patchScopedSlots (instance) {
         /* template */
         Object.assign($030d89, (function () {
           var render = function() {
+  var _obj
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("button", [_vm._v("按钮")])
+  return _c(
+    "button",
+    {
+      staticClass: "g-button",
+      class: ((_obj = {}), (_obj["icon-" + _vm.iconPosition] = true), _obj)
+    },
+    [
+      _c("svg", { staticClass: "icon" }, [
+        _c("use", { attrs: { "xlink:href": "#" + _vm.icon } })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "content" }, [_vm._t("default")], 2)
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -12518,7 +12552,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6804" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "8333" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
