@@ -1,4 +1,12 @@
-.g-button {
+@keyframes spin-data-v-030d89 {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.g-button[data-v-030d89] {
   font-size: var(--font-size);
   height: var(--button-height);
   padding: 0 1em;
@@ -10,28 +18,35 @@
   align-items: center;
   vertical-align: middle;
 }
-.g-button:hover {
+.g-button[data-v-030d89]:hover {
   border-color: var(--border-color-hover);
 }
-.g-button:active {
+.g-button[data-v-030d89]:active {
   background: var(--button-active-bg);
 }
-.g-button:focus {
+.g-button[data-v-030d89]:focus {
   outline: none;
 }
-.g-button > .icon {
+.g-button > .icon[data-v-030d89] {
   order: 1;
   margin-left: 0;
   margin-right: 0.3em;
 }
-.g-button > .content {
+.g-button > .content[data-v-030d89] {
   order: 2;
 }
-.g-button.icon-right > .icon {
+.g-button.icon-right > .icon[data-v-030d89] {
   order: 2;
   margin-right: 0;
   margin-left: 0.3rem;
 }
-.g-button.icon-right > .content {
+.g-button.icon-right > .content[data-v-030d89] {
   order: 1;
+}
+.g-button .loading[data-v-030d89] {
+  animation: spin-data-v-030d89 1s infinite linear;
+}
+.g-icon[data-v-b71dc3] {
+  width: 1em;
+  height: 1em;
 }

@@ -5,3 +5,7 @@
 ```css
     *{box-sizing: border-box;}
 ```
+## 运行
+```javascript
+  ./node_modules/.bin/parcel index.html --no-cache
+```
