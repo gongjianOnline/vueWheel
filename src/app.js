@@ -5,4 +5,11 @@ Vue.component("g-button",Button)
 Vue.component("g-icon",Icon)
 new Vue({
   el:"#app",
+  data(){
+    return{
+      loading1:true,
+      loading2:false
+    }
+  }
+
 })
