@@ -12,10 +12,29 @@
 使用本框架前,请在css中开启border-box
 
 ```css
-    *{box-sizing: border-box;}
+    *,*::before,*::after{box-sizing: border-box;}
 ```
+还需要默认设置颜色等变量(后续会改为SCSS变量)
+```
+    html{
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: #fff;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666
+    }
+```
+2. 安装
+```
+    npm install --save gongjian-vuewheel
+```
+
+
 2. 运行
-```javascript
+```
   parcel index.html --no-cache
 ```
 
