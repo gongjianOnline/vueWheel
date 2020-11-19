@@ -33,10 +33,28 @@
 ```
 
 
-2. 运行
+3. 引入gongjian-vuewheel
+```
+import {Button,ButtonGroup,Icon} from "gongjian-vuewheel"
+import 'gongjian-vuewheel/dist/index.css'
+export default {
+    name:"app"
+    components:{
+        'g-icon':Icon,
+        'g-icon':Button
+    }
+}
+```
+
+
+
+
+运行
 ```
   parcel index.html --no-cache
 ```
+
+
 
 ## 提问
 
