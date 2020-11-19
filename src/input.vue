@@ -3,7 +3,8 @@
     <input type="text"
            :value="value"
            :disabled="disabled"
-           :readonly="readonly">
+           :readonly="readonly"
+           @change="$emit('change',$event)">
     <template v-if="error">
       <icon name="i-error" class="icon-error"></icon>
       <span class="errorMessage">{{error}}</span>
