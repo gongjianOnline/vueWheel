@@ -6,81 +6,26 @@
   </div>
 </template>
 <script>
+  let validator = (value)=>{
+    let keys = Object.keys(value)
+    let invalid = true;
+    keys.forEach((key)=>{
+      if(!['span','offset'].includes(key)){
+        invalid = false
+      }
+    })
+    return invalid
+  }
   export  default {
     name:"g-col",
     props:{
-      span:{
-        type:[Number,String]
-      },
-      offset:{
-        type:[Number,String]
-      },
-      phone:{
-        type:Object,
-        validator(value){
-          let keys = Object.keys(value)
-          let invalid = true;
-          keys.forEach((key)=>{
-            if(!['span','offset'].includes(key)){
-              invalid = false
-            }
-          })
-          return invalid
-        }
-      },
-      iPad:{
-        type:Object,
-        validator(value){
-          let keys = Object.keys(value)
-          let invalid = true;
-          keys.forEach((key)=>{
-            if(!['span','offset'].includes(key)){
-              invalid = false
-            }
-          })
-          return invalid
-        }
-      },
-      narrowPc:{
-        type:Object,
-        validator(value){
-          let keys = Object.keys(value)
-          let invalid = true;
-          keys.forEach((key)=>{
-            if(!['span','offset'].includes(key)){
-              invalid = false
-            }
-          })
-          return invalid
-        }
-      },
-      pc:{
-        type:Object,
-        validator(value){
-          let keys = Object.keys(value)
-          let invalid = true;
-          keys.forEach((key)=>{
-            if(!['span','offset'].includes(key)){
-              invalid = false
-            }
-          })
-          return invalid
-        }
-      },
-      widePc:{
-        type:Object,
-        validator(value){
-          let keys = Object.keys(value)
-          let invalid = true;
-          keys.forEach((key)=>{
-            if(!['span','offset'].includes(key)){
-              invalid = false
-            }
-          })
-          return invalid
-        }
-      }
-
+      span:{type:[Number,String]},
+      offset:{type:[Number,String]},
+      phone:{type:Object, validator},
+      ipad:{type:Object, validator},
+      narrowPc:{type:Object, validator},
+      pc:{type:Object, validator},
+      widePc:{type:Object, validator}
     },
     data(){
       return{
@@ -89,7 +34,7 @@
     },
     computed:{
       colClass(){
-        let {span,offset,phone} = this;
+        let {span,offset,phone,ipad,narrowPc,pc,windPc} = this;
         let phoneClass = [];
         return [
           this.span &&`col-${this.span}`,
