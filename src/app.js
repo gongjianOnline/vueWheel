@@ -14,7 +14,8 @@ new Vue({
   data(){
     return{
       loading1:true,
-      loading2:false
+      loading2:false,
+      message:""
     }
   },
   methods:{
