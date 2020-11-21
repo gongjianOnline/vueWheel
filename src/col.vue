@@ -5,7 +5,7 @@
 </template>
 <script>
   export  default {
-    name:"col",
+    name:"g-col",
     props:{
       span:{
         type:[Number,String]

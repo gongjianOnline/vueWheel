@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name:"row",
+    name:"g-row",
     data(){
       return{
 
