@@ -1,6 +1,6 @@
 <template>
   <div class="row"
-       :style="{marginLeft:-gutter/2+'px',marginRight:-gutter/2+'px'}">
+       :style="rowStyle">
     <slot></slot>
   </div>
 </template>
@@ -15,6 +15,14 @@
     data(){
       return{
 
+      }
+    },
+    computed:{
+      rowStyle(){
+        return{
+          marginLeft:-this.gutter/2+'px',
+          marginRight:-this.gutter/2+'px'
+        }
       }
     },
     created() {
@@ -32,5 +40,6 @@
 <style lang="scss" scoped>
 .row{
   display: flex;
+  flex-wrap: wrap-reverse;
 }
 </style>
