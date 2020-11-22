@@ -1,7 +1,9 @@
 <template>
-  <div>
-
+  <div class="footer">
+    <slot></slot>
   </div>
+
+
 </template>
 <script>
 export  default {
@@ -14,15 +16,18 @@ export  default {
   props:{
 
   },
-  mounted() {
-  },
   created() {
+  },
+  mounted() {
   },
   methods:{
 
   },
 }
+
 </script>
 <style lang="scss" scoped>
+.footer{
 
+}
 </style>

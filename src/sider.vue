@@ -1,11 +1,13 @@
 <template>
-  <div>
-
+  <div class="sider">
+    <slot></slot>
   </div>
+
+
 </template>
 <script>
 export  default {
-  name:'g-sider',
+  name:"g-sider",
   data(){
     return{
 
@@ -20,9 +22,12 @@ export  default {
   },
   methods:{
 
-  }
+  },
 }
+
 </script>
 <style lang="scss" scoped>
+.sider{
 
+}
 </style>

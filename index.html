@@ -35,10 +35,28 @@
     .box{
       margin:20px;
     }
+    .demo{
+        border: 1px solid red;
+        min-height: 100px;
+
+    }
   </style>
 </head>
 <body>
 <div id="app">
+    <div class="box">
+        <g-layout style="height: 100vh">
+            <g-sider class="demo">sider</g-sider>
+            <g-layout>
+                <g-header class="demo">header</g-header>
+                <g-content class="demo">content</g-content>
+                <g-footer class="demo">footer</g-footer>
+            </g-layout>
+        </g-layout>
+    </div>
+
+
+  <hr>
   <div class="box" style="background: gray;">
     <g-row>
         <g-col span="24"

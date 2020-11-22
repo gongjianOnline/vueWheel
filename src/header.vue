@@ -7,7 +7,7 @@
 </template>
 <script>
 export  default {
-  name:"g-layout",
+  name:"g-header",
   data(){
     return{
 
