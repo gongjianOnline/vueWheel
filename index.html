@@ -35,30 +35,61 @@
     .box{
       margin:20px;
     }
+    .demo{
+        /*border: 1px solid red;*/
+        min-height: 100px;
+
+    }
+    .sider{
+        background: #333;
+        width: 200px;
+    }
+    .header{
+        background: #999;
+        height: 100px;
+    }
+    .footer{
+        background: #ccc;
+        height: 50px;
+    }
+
   </style>
 </head>
 <body>
 <div id="app">
+    <div class="box">
+        <g-layout style="height: 100vh">
+            <g-sider class="demo">sider</g-sider>
+            <g-layout>
+                <g-header class="demo">header</g-header>
+                <g-content class="demo">content</g-content>
+                <g-footer class="demo">footer</g-footer>
+            </g-layout>
+        </g-layout>
+    </div>
 
-  <div class="box">
+
+  <hr>
+  <div class="box" style="background: gray;">
     <g-row>
-      <g-col></g-col>
-      <g-col></g-col>
+        <g-col span="24"
+               :ipad="{span:8}"
+               :narrow-pc="{span:4}"
+               :pc="{span:12}"
+               :wide-pc="{span:12}">1</g-col>
+        <g-col span="24"
+               :ipad="{span:16}"
+               :narrow-pc="{span:20}"
+               :pc="{span:12}"
+               :wide-pc="{span:12}">2</g-col>
+    </g-row>
+    <g-row gutter="20">
+      <g-col>1</g-col>
+      <g-col>2</g-col>
     </g-row>
     <g-row>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-    </g-row>
-    <g-row>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-    </g-row>
-    <g-row>
-      <g-col span="4"></g-col>
-      <g-col span="20"></g-col>
+      <g-col span="4">1</g-col>
+      <g-col span="20" offset="2">2</g-col>
     </g-row>
     <g-row>
       <g-col></g-col>
@@ -79,6 +110,7 @@
 
   <hr>
   <div class="box">
+    <h3>表单组件</h3>
     <g-input value="张三" disabled></g-input>
     <g-input value="李四" readonly></g-input>
   </div>
@@ -93,6 +125,7 @@
 
 
   <div class="box">
+    <h3>按钮组件</h3>
     <g-button icon="i-settings"
               :loading="loading1"
               @click="loading1 = !loading1">按钮</g-button>
