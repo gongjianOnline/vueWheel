@@ -58,6 +58,11 @@
 <body>
 <div id="app">
     <div class="box">
+      <button @click="showToast()">test</button>
+    </div>
+
+    <hr>
+    <div class="box">
         <g-layout style="height: 100vh">
             <g-sider class="demo">sider</g-sider>
             <g-layout>
@@ -91,6 +96,20 @@
       <g-col span="4">1</g-col>
       <g-col span="20" offset="2">2</g-col>
     </g-row>
+    <g-row>
+      <g-col></g-col>
+      <g-col offset="2"></g-col>
+      <g-col></g-col>
+      <g-col></g-col>
+    </g-row>
+    <g-row gutter="10">
+      <g-col></g-col>
+      <g-col></g-col>
+    </g-row>
+    <g-row gutter="20">
+      <g-col span="2" :phone="{span:12}"></g-col>
+      <g-col span="20" offset="2" :phone="{span:12,offset:0}"></g-col>
+    </g-row>
   </div>
 
 
@@ -101,7 +120,7 @@
     <g-input value="李四" readonly></g-input>
   </div>
   <div class="box">
-    <g-input value="赵六" @change="inputChange"></g-input>
+    <g-input value="赵六"></g-input>
     <g-input v-model="message"></g-input>{{message}}
   </div>
   <div class="box">
