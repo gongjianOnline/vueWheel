@@ -27,9 +27,10 @@
         default:()=>{
           return {
             text:"关闭",
-            callback:(toast)=>{
-              toast.close()
-            }
+            // callback:(toast)=>{
+            //   toast.close()
+            // }
+            callback:undefined
           }
         }
       }
@@ -53,7 +54,9 @@
       },
       onClickClose(){
         this.close()
-        this.closeButton.callback()
+        if(this.closeButton  && typeof this.closeButton.callback === "function"){
+          this.closeButton.callback()
+        }
       }
     }
   }

@@ -38,11 +38,18 @@ new Vue({
     }
   },
   created(){
-    // this.$toast()
+
   },
   methods:{
     showToast(){
-      this.$toast("为什么不出来呢")
+      this.$toast("我是message",{
+        closeButton:{
+          text:"知道了",
+          callback() {
+            console.log("点击的回调")
+          }
+        }
+      })
     }
 
 
