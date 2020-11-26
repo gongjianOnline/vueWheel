@@ -42,13 +42,8 @@ new Vue({
   },
   methods:{
     showToast(){
-      this.$toast("我是message",{
-        closeButton:{
-          text:"知道了",
-          callback() {
-            console.log("点击的回调")
-          }
-        }
+      this.$toast("提示文字",{
+        enableHtml:true
       })
     }
 
