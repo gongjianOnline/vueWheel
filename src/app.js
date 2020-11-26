@@ -42,10 +42,10 @@ new Vue({
   },
   methods:{
     showToast(){
-      this.$toast("提示文字",{
+      this.$toast("<h2>12346</h2>",{
         enableHtml:true,
         position:'top',
-        autoClose:false
+        autoClose:3
       })
     }
   }

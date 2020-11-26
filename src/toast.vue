@@ -20,12 +20,11 @@
     },
     props:{
       autoClose:{
-        type:Boolean,
-        default:true
-      },
-      autoCLoseDelay:{
-        type:Number,
-        default:5
+        type:[Boolean,Number],
+        default:5,
+        validator:(value)=>{
+          return value === false || typeof value === "number";
+        }
       },
       closeButton:{
         type:Object,
@@ -74,8 +73,9 @@
       execAutoClose(){
         if(this.autoClose){
           setTimeout(()=>{
+
             this.close()
-          },this.autoCLoseDelay*1000)
+          },this.autoClose*1000)
         };
       },
       close(){
