@@ -43,7 +43,9 @@ new Vue({
   methods:{
     showToast(){
       this.$toast("提示文字",{
-        enableHtml:true
+        enableHtml:true,
+        position:'middle',
+        autoClose:false
       })
     }
 
