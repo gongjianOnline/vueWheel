@@ -32,7 +32,16 @@
     },
     mounted(){
       this.eventBus.$emit("updaye:selected",this.selected)
-        // this.$emit("update:selected","xxx")
+      this.$children.forEach((vm)=>{
+        if(vm.$options.name === "g-tabsHead"){
+          vm.$children.forEach((item)=>{
+            if(item.$options.name === "g-tabsItem" && item.name === this.selected){
+              console.log(item.$el)
+              this.eventBus.$emit('update:selected',this.selected,item)
+            }
+          })
+        }
+      })
     },
 
   }
