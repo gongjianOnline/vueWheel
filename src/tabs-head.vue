@@ -1,7 +1,7 @@
 <template>
   <div class="tabs-header">
     <slot></slot>
-    <div class="line" ref="line"></div>
+    <div class="line" ref="line" ></div>
     <div class="actions-wrapper">
       <slot name="actions" ></slot>
     </div>
@@ -11,15 +11,17 @@
 export  default {
   name:"g-tabsHeader",
   inject:["eventBus"],
-  created() {
+  mounted() {
     this.eventBus.$on("update:selected",(item,vm)=>{
-      console.log(item)
-      console.log(vm.$el)
+      let {width,height,top,left} = vm.$el.getBoundingClientRect()
+      console.log(width,height,top,left);
+      this.$refs.line.style.width = `${width}px`;
+      this.$refs.line.style.transform = `translateX(${left-41}px)`
     })
   },
   data(){
     return{
-
+      x:false
     }
   }
 }
@@ -31,7 +33,6 @@ $blue:blue;
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
-  border: 1px solid red;
   position: relative;
   > .actions-wrapper{
     margin-left: auto;
@@ -39,8 +40,9 @@ $blue:blue;
   > .line{
     position: absolute;
     bottom: 0;
+    left: 0;
     border-bottom:1px solid $blue;
-    width: 100px;
+    transition: all 350ms;
   }
 }
 </style>
