@@ -11,7 +11,8 @@
       selected:{
         type:String,
         required:true,
-      },direction:{
+      },
+      direction:{
         type:String,
         default:"horizontal",
         validator(value){
@@ -29,7 +30,8 @@
         eventBus:this.eventBus
       }
     },
-    created(){
+    mounted(){
+      this.eventBus.$emit("updaye:selected",this.selected)
         // this.$emit("update:selected","xxx")
     },
 
