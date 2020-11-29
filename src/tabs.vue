@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+  import Vue from "vue"
   export  default {
     name:"g-tabs",
     props:{
@@ -16,17 +17,22 @@
         validator(value){
           return ['horizontal','vertical'].indexOf(value) >= 0 ;
         }
-
+      }
+    },
+    data(){
+      return{
+        eventBus:new Vue()
+      }
+    },
+    provide(){
+      return {
+        eventBus:this.eventBus
       }
     },
     created(){
         // this.$emit("update:selected","xxx")
     },
-    data(){
-      return{
 
-      }
-    }
   }
 </script>
 <style lang="scss" scoped>

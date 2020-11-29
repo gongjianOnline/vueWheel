@@ -7,6 +7,11 @@
 <script>
 export  default {
   name:"g-tabsHeader",
+  inject:["eventBus"],
+  created() {
+    console.log("123456")
+    console.log(this.eventBus)
+  },
   data(){
     return{
 
