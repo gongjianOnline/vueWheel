@@ -14,7 +14,7 @@ export  default {
   created() {
     this.eventBus.$on("update:selected",(item,vm)=>{
       console.log(item)
-      console.log(vm)
+      console.log(vm.$el)
     })
   },
   data(){

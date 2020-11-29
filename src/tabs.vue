@@ -34,10 +34,10 @@
       this.eventBus.$emit("updaye:selected",this.selected)
       this.$children.forEach((vm)=>{
         if(vm.$options.name === "g-tabsHead"){
-          vm.$children.forEach((item)=>{
-            if(item.$options.name === "g-tabsItem" && item.name === this.selected){
-              console.log(item.$el)
-              this.eventBus.$emit('update:selected',this.selected,item)
+          vm.$children.forEach((childVm)=>{
+            if(childVm.$options.name === "g-tabsItem" && childVm.name === this.selected){
+              console.log(childVm.$el)
+              this.eventBus.$emit('update:selected',this.selected,childVm)
             }
           })
         }
