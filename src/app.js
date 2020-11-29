@@ -53,6 +53,10 @@ new Vue({
 
   },
   methods:{
+    yyy(data){
+      console.log('yyy')
+      console.log(data)
+    },
     showToast(){
       this.$toast("<h2>12346</h2>",{
         enableHtml:true,

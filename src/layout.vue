@@ -22,7 +22,6 @@ export  default {
   },
   mounted() {
     this.$children.forEach((vm)=>{
-      console.log(vm.$options.name);
       if(vm.$options.name === "g-sider"){
         this.layoutClass.hasSider = true
       }

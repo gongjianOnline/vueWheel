@@ -9,12 +9,11 @@
 </template>
 <script>
 export  default {
-  name:"g-tabsHeader",
+  name:"g-tabsHead",
   inject:["eventBus"],
   mounted() {
     this.eventBus.$on("update:selected",(item,vm)=>{
       let {width,height,top,left} = vm.$el.getBoundingClientRect()
-      console.log(width,height,top,left);
       this.$refs.line.style.width = `${width}px`;
       this.$refs.line.style.transform = `translateX(${left-41}px)`
     })

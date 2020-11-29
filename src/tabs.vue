@@ -36,8 +36,7 @@
         if(vm.$options.name === "g-tabsHead"){
           vm.$children.forEach((childVm)=>{
             if(childVm.$options.name === "g-tabsItem" && childVm.name === this.selected){
-              console.log(childVm.$el)
-              this.eventBus.$emit('update:selected',this.selected,childVm)
+              this.eventBus.$emit('update:selected',this.selected, childVm)
             }
           })
         }
