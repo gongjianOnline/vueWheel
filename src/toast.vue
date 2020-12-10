@@ -31,9 +31,6 @@
         default:()=>{
           return {
             text:"关闭",
-            // callback:(toast)=>{
-            //   toast.close()
-            // }
             callback:undefined
           }
         }

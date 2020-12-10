@@ -60,6 +60,8 @@ describe('Toast', () => {
     expect(callback).to.have.been.called
   })
 
+
+  // 接收enableHtml测试用例;
   // it('接受 enableHtml', () => {
   //   const Constructor = Vue.extend(Toast)
   //   const vm = new Constructor({
