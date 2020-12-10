@@ -58,6 +58,21 @@
 <body>
 <div id="app">
     <div class="box">
+      <g-popover>
+        <template slot="content">
+          <div>这是提示信息</div>
+        </template>
+        <template>
+          <button>按钮</button>
+        </template>
+      </g-popover>
+
+    </div>
+
+
+
+
+    <div class="box">
         <g-tabs :selected.sync="selectedTab" @update:selected="yyy">
             <g-tabs-head>
                 <template slot="actions">
