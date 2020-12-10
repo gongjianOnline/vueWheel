@@ -31,6 +31,9 @@
       }
     },
     mounted(){
+      if(this.$children.length === 0){
+        console.warn('tabs的子组件应该是tabs-head和tabs-nav,现在状态没有写子组件')
+      };
       this.eventBus.$emit("updaye:selected",this.selected)
       this.$children.forEach((vm)=>{
         if(vm.$options.name === "g-tabsHead"){
@@ -41,6 +44,8 @@
           })
         }
       })
+
+
     },
 
   }

@@ -1,6 +1,18 @@
+import Tabs from "../src/tabs";
+
 const expect = chai.expect;
 import Vue from 'vue'
+
 import Toast from '../src/toast'
+import TabsHead from "../src/tabs-head";
+import TabsBody from "../src/tabs-body";
+import TabsItem from "../src/tabs-item";
+import TabsPane from "../src/tabs-pane";
+Vue.component('g-tabs',Tabs)
+Vue.component('g-tabs-head',TabsHead)
+Vue.component('g-tabs-body',TabsBody)
+Vue.component('g-tabs-item',TabsItem)
+Vue.component('g-tabs-pane',TabsPane)
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
