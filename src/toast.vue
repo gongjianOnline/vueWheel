@@ -72,7 +72,6 @@
       execAutoClose(){
         if(this.autoClose){
           setTimeout(()=>{
-
             this.close()
           },this.autoClose*1000)
         };
