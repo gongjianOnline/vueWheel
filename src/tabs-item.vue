@@ -34,6 +34,7 @@ export  default {
   methods:{
     onClick(){
       if(this.disabled){return}
+      this.eventBus &&
       this.eventBus.$emit("update:selected",this.name,this)
     }
   },

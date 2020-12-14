@@ -19,6 +19,7 @@ describe('TabsItem', () => {
   it('存在.', () => {
     expect(Tabs).to.be.ok
   })
+
   it("子组件接收name属性", () => {
     const Constructor = Vue.extend(TabsItem)
     const  vm = new Constructor({
