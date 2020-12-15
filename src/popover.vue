@@ -29,28 +29,30 @@
     },
     methods: {
       positionContent () {
-        document.body.appendChild(this.$refs.contentWrapper)
         const {contentWrapper,triggerWrapper} = this.$refs;
+        document.body.appendChild(contentWrapper)
+        let {height:height2} = contentWrapper.getBoundingClientRect()
         let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-        if(this.position === 'top'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + window.scrollY + 'px'
+        let positions = {
+          top:{
+            top:top + window.scrollY,
+            left:left + window.scrollX
+          },
+          bottom:{
+            top: top + height + window.scrollY ,
+            left:left + window.scrollX
+          },
+          left:{
+            top:top + window.scrollY + (height - height2) / 2,
+            left:left + window.scrollX
+          },
+          right:{
+            top: top + window.scrollY + (height - height2) /2,
+            left:left + window.scrollX + width
+          }
         }
-        if(this.position === 'bottom'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + height +window.scrollY + 'px'
-        }
-        if(this.position === 'left'){
-          contentWrapper.style.left = left + window.scrollX -10+ 'px'
-          let {height:height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY + (height-height2)/2 + "px";
-        }
-        if(this.position === 'right'){
-          contentWrapper.style.left = left + window.scrollX + width + 'px'
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY + (height - height2) / 2 + 'px'
-        }
-
+        contentWrapper.style.left = positions[this.position].left + "px"
+        contentWrapper.style.top = positions[this.position].top + "px"
       },
       onClickDocument (e) {
         if (this.$refs.popover &&
