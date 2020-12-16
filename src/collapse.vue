@@ -37,6 +37,6 @@
   .collapse{
     border: 1px solid $grey;
     border-radius: $border-radius;
-    border-bottom: none;
+    /*border-bottom: none;*/
   }
 </style>

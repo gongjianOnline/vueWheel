@@ -1,6 +1,6 @@
 <template>
   <div class="collapseItem">
-    <div class="title">
+    <div class="title" @click="open=!open">
       {{title}}
     </div>
     <div class="content" v-if="open">
@@ -54,6 +54,7 @@
       display: flex;
       align-items:center;
       padding: 0 8px;
+      cursor: pointer;
     }
     &:first-child{
       >.title{
