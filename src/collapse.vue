@@ -23,6 +23,9 @@
       single:{
         type:Boolean,
         default:false
+      },
+      selected:{
+        type:String
       }
     },
     computed:{
@@ -32,7 +35,7 @@
 
     },
     mounted() {
-
+      this.eventBus.$emit('update:selected',this.name)
     },
     methods:{
 

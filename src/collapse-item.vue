@@ -31,8 +31,7 @@
 
     },
     mounted() {
-      this.eventBus && this.eventBus.$on('update:selected',(vm)=>{
-        console.log(vm)
+      this.eventBus && this.eventBus.$on('update:selected',(name)=>{
         if(vm!== this){
           this.close()
         }
