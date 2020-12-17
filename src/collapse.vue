@@ -13,10 +13,8 @@
       }
     },
     provide(){
-      if(this.single){
-        return{
-          eventBus:this.eventBus
-        }
+      return {
+        eventBus: this.eventBus
       }
     },
     props:{
@@ -35,7 +33,7 @@
 
     },
     mounted() {
-      this.eventBus.$emit('update:selected',this.name)
+      this.eventBus.$emit('update:selected',this.selected)
     },
     methods:{
 
