@@ -52,7 +52,8 @@ new Vue({
       loading1:true,
       loading2:false,
       message:"",
-      selectedTab:"sports"
+      selectedTab:"sports",
+      selectedTabs:'1'
     }
   },
   created(){
