@@ -1,7 +1,7 @@
 module.exports = {
   base:'./',
-  title: 'ElementUI',
-  description: 'ElementUI',
+  title: 'JUI',
+  description: 'JUI',
   themeConfig: {
     nav:[
       {text:'主页',link:'/'},
