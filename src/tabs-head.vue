@@ -15,7 +15,7 @@ export  default {
     this.eventBus.$on("update:selected",(item,vm)=>{
       let {width,height,top,left} = vm.$el.getBoundingClientRect()
       this.$refs.line.style.width = `${width}px`;
-      this.$refs.line.style.transform = `translateX(${left-41}px)`
+      // this.$refs.line.style.transform = `translateX(${left-41}px)`
     })
   },
   data(){
@@ -45,7 +45,6 @@ $border-color:#ddd;
     position: absolute;
     bottom: 0;
     left: 0;
-    border-bottom:1px solid $blue;
     transition: all 350ms;
   }
 }

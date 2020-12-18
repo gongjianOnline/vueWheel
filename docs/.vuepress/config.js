@@ -1,7 +1,13 @@
 module.exports = {
-  title: 'UI轮子',
-  description: 'xxxxxxx',
+  base:'./',
+  title: 'ElementUI',
+  description: 'ElementUI',
   themeConfig: {
+    nav:[
+      {text:'主页',link:'/'},
+      {text:'文档',link:'/guide/'},
+      {text:'交流',link:'https://google.com'}
+    ],
     sidebar: [
       {
         title:'入门',
@@ -12,7 +18,16 @@ module.exports = {
       },
       {
         title:'组件',
-        children:['/components/button']
+        children:[
+          '/components/button',
+          '/components/input',
+          '/components/layout',
+          '/components/container',
+          '/components/alert',
+          '/components/tabs',
+          '/components/tooltip',
+          '/components/collapse',
+        ]
       }
 
     ]
